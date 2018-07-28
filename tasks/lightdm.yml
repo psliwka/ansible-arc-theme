@@ -1,0 +1,9 @@
+- name: set LightDM greeter theme variables
+  ini_file:
+    path: /etc/lightdm/lightdm-gtk-greeter.conf
+    section: greeter
+    option: "{{ item.key }}"
+    value: "{{ item.value }}"
+  with_dict:
+    theme-name: Arc-Dark
+    icon-theme-name: Papirus-Dark

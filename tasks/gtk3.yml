@@ -1,0 +1,9 @@
+- name: set gtk3 theme variables
+  ini_file:
+    path: /etc/gtk-3.0/settings.ini
+    section: Settings
+    option: "{{ item.key }}"
+    value: "{{ item.value }}"
+  with_dict:
+    gtk-theme-name: Arc-Dark
+    gtk-icon-theme-name: Papirus-Dark

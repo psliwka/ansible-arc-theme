@@ -1,0 +1,4 @@
+- name: force Firefox to use light theme for content
+  template:
+    src: firefox.js.j2
+    dest: /etc/firefox/arc-theme-fix.js

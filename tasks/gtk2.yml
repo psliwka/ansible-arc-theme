@@ -1,0 +1,9 @@
+- name: set gtk2 theme variables
+  lineinfile:
+    path: /etc/gtk-2.0/gtkrc
+    create: yes
+    regexp: "^{{ item.key }}[ =]"
+    line: "{{ item.key }} = \"{{ item.value }}\""
+  with_dict:
+    gtk-theme-name: Arc-Dark
+    gtk-icon-theme-name: Papirus-Dark
